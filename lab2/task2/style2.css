@@ -1,0 +1,101 @@
+body {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+    background-color: #f5f5f5;
+}
+
+h2 {
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.seasons {
+    list-style: none;
+    padding-left: 0;
+}
+
+.seasons > li {
+    margin: 15px 0;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.seasons > li ul {
+    list-style: none;
+    padding-left: 30px;
+    margin-top: 10px;
+}
+
+.seasons > li ul li {
+    margin: 5px 0;
+    font-weight: normal;
+    font-size: 16px;
+}
+
+.winter {
+    list-style-image: url('arrow-right_16.png');
+    padding-left: 25px;
+}
+
+.winter ul li::before {
+    content: '';
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    background-image: url('snowflake_16.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin-right: 8px;
+    vertical-align: middle;
+}
+
+.spring {
+    list-style-image: url('arrow-right_16.png');
+    padding-left: 25px;
+}
+
+.spring ul li::before {
+    content: '';
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    background-image: url('leaf_g_16.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin-right: 8px;
+    vertical-align: middle;
+}
+
+.summer {
+    list-style-image: url('arrow-right_16.png');
+    padding-left: 25px;
+}
+
+.summer ul li::before {
+    content: '';
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    background-image: url('sun_16.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin-right: 8px;
+    vertical-align: middle;
+}
+
+.autumn {
+    list-style-image: url('arrow-right_16.png');
+    padding-left: 25px;
+}
+
+.autumn ul li::before {
+    content: '';
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    background-image: url('leaf_y_16.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin-right: 8px;
+    vertical-align: middle;
+}

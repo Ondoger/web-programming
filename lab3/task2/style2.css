@@ -1,0 +1,40 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f7f7fa;
+    padding: 30px;
+}
+
+.schedule {
+    border-collapse: collapse;
+    min-width: 600px;
+    margin: 0 auto;
+    background-color: #fff;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.schedule th, .schedule td {
+    border: 1px solid #444;
+    padding: 6px 10px;
+    font-size: 15px;
+    text-align: left;
+}
+
+.schedule th {
+    background-color: #edf2ff;
+    text-align: center;
+    font-weight: bold;
+}
+
+.schedule th.vertical {
+    writing-mode: vertical-lr;
+    text-align: center;
+    background: #c2e0ff;
+    font-weight: bold;
+    font-size: 18px;
+    letter-spacing: 3px;
+    min-width: 36px;
+}
+
+.schedule tr:nth-child(even) td {
+    background-color: #f6f6fc;
+}

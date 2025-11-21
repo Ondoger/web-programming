@@ -1,0 +1,74 @@
+body {
+    font-family: Arial, sans-serif;
+    background: #f9fafb;
+    margin: 0;
+    padding: 24px;
+}
+.table-container {
+    max-width: 900px;
+    margin: 0 auto;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+    padding: 30px 20px;
+}
+.messages-table {
+    border-collapse: collapse;
+    width: 100%;
+}
+.messages-table thead tr {
+    background: #3576a3;
+    color: #fff;
+}
+.messages-table th,
+.messages-table td {
+    border: none;
+    padding: 16px 14px;
+    text-align: left;
+    font-size: 15px;
+}
+.messages-table th {
+    font-weight: bold;
+}
+.messages-table tbody tr {
+    background: #e9f3fa;
+    transition: background 0.23s;
+}
+.messages-table tbody tr:hover {
+    background: #bddaf7;
+}
+.updated {
+    color: #808080;
+    font-size: 12px;
+}
+.size {
+    padding: 4px 16px;
+    border-radius: 16px;
+    color: #fff;
+    font-size: 13px;
+    font-weight: 600;
+    background: #6ea9e7;
+    display: inline-block;
+}
+.size.big { background: #6ea9e7; }
+.size.small { background: #b0cdfa; }
+.size.middle { background: #61c7cd; }
+.size.over { background: #4872b6; }
+
+.priority {
+    border-radius: 50%;
+    width: 25px;
+    height: 25px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 17px;
+    color: #fff;
+}
+.p1 { background: #e74c3c; }
+.p2 { background: #e6bb2d; }
+.p3 { background: #45d039; }
+.p4 { background: #4297e2; }
+.p5 { background: #1e738c; }
+

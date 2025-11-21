@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Card Game</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 40px;
+            background-color: #e8e8e8;
+        }
+        
+        h2 {
+            color: #333;
+            margin-bottom: 10px;
+        }
+        
+        .cards {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 30px;
+        }
+        
+        .card {
+            width: 70px;
+            height: 100px;
+            background-color: white;
+            border: 2px solid #999;
+            border-radius: 5px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            font-weight: bold;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        }
+        
+        .red {
+            color: #d32f2f;
+        }
+        
+        .black {
+            color: #000;
+        }
+    </style>
+</head>
+<body>
+    <h2>Player 1:</h2>
+    <div class="cards">
+        <div class="card black">2<br>♠</div>
+        <div class="card red">9<br>♥</div>
+        <div class="card red">6<br>♥</div>
+        <div class="card red">A<br>♦</div>
+        <div class="card black">Q<br>♠</div>
+        <div class="card black">J<br>♠</div>
+    </div>
+    
+    <h2>Player 2:</h2>
+    <div class="cards">
+        <div class="card red">3<br>♥</div>
+        <div class="card black">A<br>♣</div>
+        <div class="card black">10<br>♠</div>
+        <div class="card red">K<br>♦</div>
+        <div class="card black">8<br>♠</div>
+        <div class="card red">3<br>♥</div>
+    </div>
+</body>
+</html>
