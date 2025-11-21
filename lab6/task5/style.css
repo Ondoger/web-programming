@@ -1,0 +1,26 @@
+body {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #fff;
+    }
+
+    .loader {
+      width: 180px;
+      height: 180px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .arrow-spin {
+      animation: spin 1.2s linear infinite;
+      width: 150px;
+      height: 150px;
+      display: block;
+    }
+
+    @keyframes spin {
+      to { transform: rotate(360deg);}
+    }

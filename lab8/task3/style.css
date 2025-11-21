@@ -1,0 +1,280 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.5;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: #fff;
+    min-height: 100vh;
+    box-shadow: 0 0 20px rgba(0,0,0,0.05);
+    display: flex;
+    flex-direction: column;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 25px;
+    border-bottom: 1px solid #e0e0e0;
+    background-color: #fff;
+    height: 70px; 
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    font-weight: 600;
+    color: #444;
+    font-size: 18px;
+}
+
+.logo-icon {
+    font-size: 24px;
+    color: #3498db;
+    margin-right: 12px;
+}
+
+.user-info {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.user-email {
+    font-size: 14px;
+    color: #666;
+}
+
+.user-avatar {
+    font-size: 32px;
+    color: #bdc3c7;
+}
+
+.main-content {
+    display: flex;
+    flex: 1; 
+}
+
+.sidebar {
+    width: 220px; 
+    padding: 20px;
+    background-color: #fafafa;
+    border-right: 1px solid #eee;
+    flex-shrink: 0;
+    transition: width 0.3s ease; 
+}
+
+.menu-item {
+    display: flex;
+    align-items: center;
+    padding: 12px 15px;
+    margin-bottom: 8px;
+    border-radius: 8px;
+    cursor: pointer;
+    color: #555;
+    font-size: 14px;
+    transition: all 0.2s ease;
+}
+
+.menu-item:hover {
+    background-color: #eef2f5;
+    color: #333;
+}
+
+.menu-item.active {
+    background-color: #e8f0fe; 
+    color: #1a73e8;
+    font-weight: 600;
+}
+
+.menu-item i {
+    width: 24px;
+    text-align: center;
+    margin-right: 12px;
+    font-size: 16px;
+}
+
+.email-list {
+    flex-grow: 1;
+    background-color: #fff;
+    overflow: hidden; 
+}
+
+.email-item {
+    display: flex;
+    align-items: center;
+    padding: 15px 25px;
+    border-bottom: 1px solid #f0f0f0;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    height: 60px; 
+}
+
+.email-item:hover {
+    background-color: #f8f9fa;
+    box-shadow: inset 1px 0 0 #dadce0; 
+}
+
+.star-icon {
+    margin-right: 20px;
+    color: #dadce0;
+    font-size: 16px;
+    cursor: pointer;
+    flex-shrink: 0;
+}
+
+.star-icon:hover {
+    color: #5f6368;
+}
+
+.star-icon.active-star {
+    color: #f4b400; 
+}
+
+.email-sender {
+    width: 200px;
+    font-weight: 600;
+    color: #202124;
+    margin-right: 20px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    flex-shrink: 0;
+}
+
+.email-preview {
+    flex-grow: 1;
+    color: #5f6368;
+    font-size: 14px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin-right: 20px;
+}
+
+.email-meta {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    width: 80px;
+    font-size: 12px;
+    color: #5f6368;
+    flex-shrink: 0;
+}
+
+.email-meta i {
+    margin-right: 10px;
+    font-size: 14px;
+    color: #5f6368;
+}
+
+@media (max-width: 768px) {
+
+    .sidebar {
+        width: 70px;
+        padding: 20px 10px;
+        text-align: center;
+    }
+
+    .menu-text {
+        display: none;
+    }
+
+    .menu-item {
+        justify-content: center;
+        padding: 12px 0;
+        margin-bottom: 5px;
+    }
+
+    .menu-item i {
+        margin-right: 0;
+        font-size: 20px;
+    }
+
+    .email-item {
+        padding: 15px 15px;
+    }
+
+    .email-sender {
+        width: 140px; 
+        font-size: 14px;
+    }
+
+    .star-icon {
+        margin-right: 15px;
+    }
+}
+
+@media (max-width: 600px) {
+
+    .header {
+        padding: 10px 15px;
+        height: 60px;
+    }
+
+    .user-email {
+        display: none; 
+    }
+
+    .sidebar {
+        width: 60px;
+        padding: 15px 5px;
+    }
+
+    .email-item {
+        height: auto; 
+        flex-wrap: wrap; 
+        padding: 12px 15px;
+        align-items: flex-start; 
+        position: relative;
+    }
+
+    .star-icon {
+        margin-top: 2px;
+        margin-right: 10px;
+        order: 1;
+    }
+
+    .email-sender {
+        width: calc(100% - 100px); 
+        order: 2;
+        margin-right: 0;
+        margin-bottom: 4px;
+        font-size: 15px;
+    }
+
+    .email-meta {
+        width: auto;
+        order: 3;
+        position: absolute;
+        top: 12px;
+        right: 15px;
+        font-weight: bold;
+        color: #1a73e8; 
+    }
+
+    .email-meta i {
+        display: none; 
+    }
+
+    .email-preview {
+        width: 100%;
+        order: 4;
+        margin-left: 26px; 
+        margin-right: 0;
+        white-space: nowrap; 
+        font-size: 13px;
+        color: #888;
+    }
+}

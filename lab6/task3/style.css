@@ -1,0 +1,100 @@
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f5f5f5;
+    font-family: Arial, sans-serif;
+}
+
+.pricing-container {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+.card {
+    background: #fff;
+    width: 200px;
+    text-align: center;
+    padding: 20px 10px;
+    border-radius: 5px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.1);
+    border-top: 3px solid #ccc;
+    position: relative;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    z-index: 1;
+}
+
+.card:hover {
+    transform: scale(1.15);
+    z-index: 10;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+.card-header {
+    font-weight: bold;
+    font-size: 14px;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+}
+
+.price-block {
+    border-top: 1px solid #eee;
+    border-bottom: 1px solid #eee;
+    padding: 15px 0;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.amount {
+    font-size: 36px;
+    font-weight: bold;
+}
+
+.currency {
+    font-size: 18px;
+    vertical-align: top;
+    position: relative;
+    top: 5px;
+}
+
+.period {
+    font-size: 12px;
+    color: #aaa;
+    margin-top: 5px;
+}
+
+.features {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 20px 0;
+    font-size: 11px;
+    line-height: 2.5;
+    color: #555;
+    font-weight: bold;
+}
+
+.btn {
+    border: none;
+    padding: 8px 25px;
+    color: white;
+    font-size: 12px;
+    cursor: pointer;
+    border-radius: 3px;
+    font-weight: bold;
+}
+
+.enterprise { border-top-color: #c93456; }
+.enterprise .btn { background-color: #c93456; }
+
+.professional { border-top-color: #d48d3b; }
+.professional .btn { background-color: #d48d3b; }
+
+.standard { border-top-color: #2b658e; }
+.standard .btn { background-color: #2b658e; }
+
+.basic { border-top-color: #6db837; }
+.basic .btn { background-color: #6db837; }

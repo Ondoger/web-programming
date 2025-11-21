@@ -1,0 +1,108 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    margin: 0;
+}
+
+.clock {
+    position: relative;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    background-color: white;
+    border: 10px solid #333;
+    box-shadow: 0 10px 50px rgba(0, 0, 0, 0.3);
+}
+
+.clock::before {
+    content: '';
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    background-color: #333;
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+}
+
+.hour-hand {
+    position: absolute;
+    width: 6px;
+    height: 80px;
+    background-color: #333;
+    top: 70px;
+    left: 50%;
+    transform-origin: bottom center;
+    transform: translateX(-50%);
+    animation: rotate-hour 43200s linear infinite;
+    border-radius: 3px;
+}
+
+.minute-hand {
+    position: absolute;
+    width: 4px;
+    height: 110px;
+    background-color: #555;
+    top: 40px;
+    left: 50%;
+    transform-origin: bottom center;
+    transform: translateX(-50%);
+    animation: rotate-minute 3600s linear infinite;
+    border-radius: 2px;
+}
+
+.second-hand {
+    position: absolute;
+    width: 2px;
+    height: 120px;
+    background-color: #e74c3c;
+    top: 30px;
+    left: 50%;
+    transform-origin: bottom center;
+    transform: translateX(-50%);
+    animation: rotate-second 60s linear infinite;
+}
+
+.center-dot {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: #e74c3c;
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 11;
+}
+
+@keyframes rotate-hour {
+    from {
+        transform: translateX(-50%) rotate(0deg);
+    }
+    to {
+        transform: translateX(-50%) rotate(360deg);
+    }
+}
+
+@keyframes rotate-minute {
+    from {
+        transform: translateX(-50%) rotate(0deg);
+    }
+    to {
+        transform: translateX(-50%) rotate(360deg);
+    }
+}
+
+@keyframes rotate-second {
+    from {
+        transform: translateX(-50%) rotate(0deg);
+    }
+    to {
+        transform: translateX(-50%) rotate(360deg);
+    }
+}

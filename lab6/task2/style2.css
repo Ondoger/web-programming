@@ -1,0 +1,62 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f4f4f4;
+    font-family: Arial, sans-serif;
+}
+
+.shutter-container {
+    position: relative;
+    width: 400px;
+    height: 200px;
+    background-color: #fff;
+    perspective: 800px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.content-text {
+    font-size: 32px;
+    font-weight: bold;
+    color: #000;
+    z-index: 0;
+}
+
+.shutter {
+    position: absolute;
+    top: 0;
+    width: 50%;
+    height: 100%;
+    background-color: #7A2B59;
+    border: 1px solid #581e40;
+    box-sizing: border-box;
+    z-index: 1;
+    transition: transform 0s;
+}
+
+.shutter-left {
+    left: 0;
+    transform-origin: left center;
+}
+
+.shutter-right {
+    right: 0;
+    transform-origin: right center;
+}
+
+.shutter-container:hover .shutter {
+    transition: transform 2s ease-in-out;
+}
+
+.shutter-container:hover .shutter-left {
+    transform: rotateY(-85deg);
+}
+
+.shutter-container:hover .shutter-right {
+    transform: rotateY(85deg);
+}
