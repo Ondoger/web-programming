@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Оплата карткою (Рівень 1)</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="checkout-wrapper">
+        <form class="card-form" action="#" method="POST">
+            <h2 class="form-title">Введіть дані картки</h2>
+
+            <div class="card-visual">
+                <div class="card-chip"></div>
+                <div class="card-logo">VISA</div>
+                <div class="card-number-display" id="display-number">**** **** **** ****</div>
+                <div class="card-info-display">
+                    <div class="display-name" id="display-name">ІМ'Я ВЛАСНИКА</div>
+                    <div class="display-expiry" id="display-expiry">ММ/РР</div>
+                </div>
+            </div>
+
+            <div class="input-group">
+                <label for="cardNumber">Номер картки</label>
+                <div class="input-with-icon">
+                    <input type="text" id="cardNumber" name="cardNumber" placeholder="0000 0000 0000 0000" maxlength="19" required>
+                    <span class="icon">💳</span>
+                </div>
+            </div>
+
+            <div class="input-group">
+                <label for="cardName">Ім'я власника</label>
+                <input type="text" id="cardName" name="cardName" placeholder="Введіть ім'я латиницею" required>
+            </div>
+
+            <div class="row">
+                <div class="input-group half">
+                    <label for="expiry">Термін дії</label>
+                    <input type="text" id="expiry" name="expiry" placeholder="ММ/РР" maxlength="5" required>
+                </div>
+                <div class="input-group half">
+                    <label for="cvv">CVV / CVC</label>
+                    <div class="input-with-icon">
+                        <input type="password" id="cvv" name="cvv" placeholder="•••" maxlength="4" required>
+                        <span class="icon">🔒</span>
+                    </div>
+                </div>
+            </div>
+
+            <button type="submit" class="submit-btn">Оплатити зараз</button>
+        </form>
+    </div>
+
+    <script>
+        const numberInput = document.getElementById('cardNumber');
+        const nameInput = document.getElementById('cardName');
+        const expiryInput = document.getElementById('expiry');
+
+        const displayNum = document.getElementById('display-number');
+        const displayName = document.getElementById('display-name');
+        const displayExpiry = document.getElementById('display-expiry');
+
+        numberInput.addEventListener('input', (e) => {
+            let val = e.target.value.replace(/\D/g, '');
+            val = val.replace(/(.{4})/g, '$1 ').trim();
+            e.target.value = val;
+            displayNum.textContent = val || '**** **** **** ****';
+        });
+
+        nameInput.addEventListener('input', (e) => {
+            let val = e.target.value.toUpperCase();
+            displayName.textContent = val || "ІМ'Я ВЛАСНИКА";
+        });
+
+        expiryInput.addEventListener('input', (e) => {
+            let val = e.target.value.replace(/\D/g, '');
+            if (val.length >= 2) {
+                val = val.substring(0, 2) + '/' + val.substring(2, 4);
+            }
+            e.target.value = val;
+            displayExpiry.textContent = val || 'ММ/РР';
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Реєстрація (Рівень 3)</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="registration-wrapper">
+        <form class="registration-form" action="#" method="POST">
+            <h2 class="form-title">Реєстрація Користувача</h2>
+            
+            <div class="form-grid">
+                
+                <!-- Registration Data -->
+                <fieldset class="form-section">
+                    <legend>Реєстраційні дані</legend>
+                    
+                    <div class="input-group">
+                        <label for="login">Логін</label>
+                        <div class="input-icon-wrapper">
+                            <span class="input-icon" style="background-image: url('../icons_hw_module_8/username.png');"></span>
+                            <input type="text" id="login" name="login" placeholder="Введіть логін" required>
+                        </div>
+                    </div>
+
+                    <div class="input-group">
+                        <label for="email">E-mail</label>
+                        <div class="input-icon-wrapper">
+                            <span class="input-icon" style="background-image: url('../icons_hw_module_8/email.png');"></span>
+                            <input type="email" id="email" name="email" placeholder="example@mail.com" required>
+                        </div>
+                    </div>
+
+                    <div class="input-group">
+                        <label for="password">Пароль</label>
+                        <div class="input-icon-wrapper">
+                            <span class="input-icon" style="background-image: url('../icons_hw_module_8/pswd.png');"></span>
+                            <input type="password" id="password" name="password" placeholder="Мінімум 8 символів" minlength="8" required>
+                        </div>
+                    </div>
+                </fieldset>
+
+                <!-- Personal Data -->
+                <fieldset class="form-section">
+                    <legend>Персональні дані</legend>
+                    
+                    <div class="input-group">
+                        <label for="firstname">Ім'я</label>
+                        <input type="text" id="firstname" name="firstname" placeholder="Ваше ім'я" required>
+                    </div>
+
+                    <div class="input-group">
+                        <label for="lastname">Прізвище</label>
+                        <input type="text" id="lastname" name="lastname" placeholder="Ваше прізвище" required>
+                    </div>
+
+                    <div class="row-group">
+                        <div class="input-group gender-group">
+                            <label>Стать</label>
+                            <div class="radio-options">
+                                <label><input type="radio" name="gender" value="male" required> Ч</label>
+                                <label><input type="radio" name="gender" value="female"> Ж</label>
+                            </div>
+                        </div>
+
+                        <div class="input-group">
+                            <label for="birthdate">Дата народження</label>
+                            <input type="date" id="birthdate" name="birthdate" required>
+                        </div>
+                    </div>
+                </fieldset>
+            </div>
+
+            <!-- Agreements -->
+            <fieldset class="form-section agreements">
+                <div class="checkbox-group">
+                    <input type="checkbox" id="newsletter" name="newsletter">
+                    <label for="newsletter">Підписатися на розсилку новин</label>
+                </div>
+                <div class="checkbox-group">
+                    <input type="checkbox" id="rules" name="rules" required>
+                    <label for="rules">Я погоджуюся з правилами ресурсу</label>
+                </div>
+            </fieldset>
+
+            <button type="submit" class="submit-btn">Зареєструватися</button>
+
+        </form>
+    </div>
+
+</body>
+</html>
