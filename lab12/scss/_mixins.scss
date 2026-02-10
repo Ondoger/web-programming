@@ -1,0 +1,87 @@
+@use 'sass:math';
+
+@mixin respond-to($breakpoint) {
+  @if $breakpoint == 'mobile' {
+    @media (max-width: $breakpoint-mobile) {
+      @content;
+    }
+  } @else if $breakpoint == 'tablet' {
+    @media (max-width: $breakpoint-tablet) {
+      @content;
+    }
+  } @else if $breakpoint == 'desktop' {
+    @media (min-width: $breakpoint-desktop) {
+      @content;
+    }
+  } @else if $breakpoint == 'wide' {
+    @media (min-width: $breakpoint-wide) {
+      @content;
+    }
+  }
+}
+
+@function strip-units($value) {
+  @return math.div($value, $value * 0 + 1);
+}
+
+@mixin fluid-type($min-size, $max-size, $min-vw: 320px, $max-vw: 1200px) {
+  font-size: $min-size;
+
+  @media (min-width: $min-vw) {
+    font-size: calc(
+      #{$min-size} + #{strip-units($max-size - $min-size)} *
+        ((100vw - #{$min-vw}) / #{strip-units($max-vw - $min-vw)})
+    );
+  }
+
+  @media (min-width: $max-vw) {
+    font-size: $max-size;
+  }
+}
+
+@mixin button-base {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: $spacing-xs;
+  padding: 0.75rem 1.75rem;
+  font-family: $font-primary;
+  font-size: 1rem;
+  font-weight: $font-weight-semibold;
+  text-decoration: none;
+  border: 2px solid transparent;
+  border-radius: $radius-full;
+  cursor: pointer;
+  transition: all $transition-base;
+  line-height: 1.5;
+}
+
+@mixin box-shadow($level: 'md') {
+  @if $level == 'sm' {
+    box-shadow: $shadow-sm;
+  } @else if $level == 'md' {
+    box-shadow: $shadow-md;
+  } @else if $level == 'lg' {
+    box-shadow: $shadow-lg;
+  } @else if $level == 'xl' {
+    box-shadow: $shadow-xl;
+  }
+}
+
+@mixin flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin section-padding {
+  padding: $spacing-3xl 0;
+
+  @include respond-to('tablet') {
+    padding: $spacing-2xl 0;
+  }
+
+  @include respond-to('mobile') {
+    padding: $spacing-xl 0;
+  }
+}

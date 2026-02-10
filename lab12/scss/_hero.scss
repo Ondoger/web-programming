@@ -1,0 +1,129 @@
+.hero {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  background-color: $color-dark;
+  background-image: url('../texture.avif');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  overflow: hidden;
+
+  &::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+      135deg,
+      rgba($color-dark, 0.92) 0%,
+      rgba($color-primary-dark, 0.85) 50%,
+      rgba($color-dark, 0.9) 100%
+    );
+    z-index: 1;
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: -150px;
+    right: -150px;
+    width: 500px;
+    height: 500px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba($color-secondary, 0.15) 0%, transparent 70%);
+    z-index: 1;
+  }
+
+  &__content {
+    position: relative;
+    z-index: 2;
+    max-width: 700px;
+    animation: fadeInUp 1s ease forwards;
+  }
+
+  &__badge {
+    display: inline-flex;
+    align-items: center;
+    gap: $spacing-xs;
+    background: rgba($color-white, 0.1);
+    border: 1px solid rgba($color-white, 0.15);
+    border-radius: $radius-full;
+    padding: 0.4rem 1rem;
+    margin-bottom: $spacing-md;
+    color: $color-secondary;
+    font-size: 0.85rem;
+    font-weight: $font-weight-medium;
+    backdrop-filter: blur(4px);
+
+    i {
+      font-size: 0.75rem;
+    }
+  }
+
+  &__title {
+    @include fluid-type(2rem, 3.5rem);
+    color: $color-white;
+    margin-bottom: $spacing-md;
+    line-height: 1.15;
+
+    span {
+      background: linear-gradient(90deg, $color-secondary, $color-primary-light);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+  }
+
+  &__text {
+    @include fluid-type(1rem, 1.2rem);
+    color: rgba($color-white, 0.75);
+    line-height: 1.8;
+    margin-bottom: $spacing-xl;
+    max-width: 560px;
+  }
+
+  &__actions {
+    display: flex;
+    gap: $spacing-sm;
+    flex-wrap: wrap;
+  }
+}
+
+%btn-base {
+  @include button-base;
+}
+
+.btn-primary {
+  @extend %btn-base;
+  background: linear-gradient(135deg, $color-primary, $color-primary-light);
+  color: $color-white;
+  border-color: transparent;
+
+  &:hover {
+    transform: translateY(-3px);
+    @include box-shadow('lg');
+    background: linear-gradient(135deg, darken($color-primary, 5%), $color-primary-light);
+  }
+
+  &:active {
+    transform: translateY(-1px);
+  }
+}
+
+.btn-outline {
+  @extend %btn-base;
+  background: transparent;
+  color: $color-white;
+  border-color: rgba($color-white, 0.3);
+
+  &:hover {
+    background: rgba($color-white, 0.1);
+    border-color: rgba($color-white, 0.5);
+    transform: translateY(-3px);
+  }
+
+  &:active {
+    transform: translateY(-1px);
+  }
+}

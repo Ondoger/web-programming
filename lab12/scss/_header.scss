@@ -1,0 +1,115 @@
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  background: rgba($color-white, 0.95);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid $color-border;
+  transition: all $transition-base;
+
+  &__inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: $spacing-sm 0;
+  }
+
+  &__logo {
+    display: flex;
+    align-items: center;
+    gap: $spacing-xs;
+    font-family: $font-heading;
+    font-size: 1.5rem;
+    font-weight: $font-weight-bold;
+    color: $color-dark;
+
+    i {
+      color: $color-primary;
+      font-size: 1.75rem;
+    }
+
+    span {
+      background: linear-gradient(135deg, $color-primary, $color-secondary);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+  }
+
+  &__nav {
+    display: flex;
+    align-items: center;
+    gap: $spacing-lg;
+
+    @include respond-to('tablet') {
+      display: none;
+    }
+  }
+
+  &__link {
+    font-size: 0.95rem;
+    font-weight: $font-weight-medium;
+    color: $color-text;
+    position: relative;
+    padding: $spacing-xs 0;
+
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background: $color-primary;
+      transition: width $transition-base;
+    }
+
+    &:hover {
+      color: $color-primary;
+
+      &::after {
+        width: 100%;
+      }
+    }
+  }
+
+  &__cta {
+    @include button-base;
+    background: $color-primary;
+    color: $color-white;
+    padding: 0.5rem 1.25rem;
+    font-size: 0.9rem;
+
+    &:hover {
+      background: $color-primary-dark;
+      transform: translateY(-2px);
+      @include box-shadow('md');
+    }
+
+    @include respond-to('tablet') {
+      display: none;
+    }
+  }
+
+  &__burger {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+
+    span {
+      display: block;
+      width: 24px;
+      height: 2px;
+      background: $color-dark;
+      border-radius: $radius-full;
+      transition: all $transition-base;
+    }
+
+    @include respond-to('tablet') {
+      display: flex;
+    }
+  }
+}
