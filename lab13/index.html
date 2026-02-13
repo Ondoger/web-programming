@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Лабораторна 13 — Умовні оператори JS</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Segoe UI', Tahoma, sans-serif;
+      background: #0f0f1a;
+      color: #e0e0f0;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 40px 20px;
+    }
+    h1 {
+      font-size: 2rem;
+      margin-bottom: 8px;
+      background: linear-gradient(135deg, #7c3aed, #3b82f6);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    p.subtitle {
+      color: #888;
+      margin-bottom: 40px;
+      font-size: 0.95rem;
+    }
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 24px;
+      width: 100%;
+      max-width: 960px;
+    }
+    .card {
+      background: #1a1a2e;
+      border-radius: 16px;
+      padding: 28px;
+      border: 1px solid #2a2a45;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 8px 32px rgba(124, 58, 237, 0.25);
+    }
+    .badge {
+      display: inline-block;
+      padding: 4px 12px;
+      border-radius: 20px;
+      font-size: 0.75rem;
+      font-weight: 600;
+      margin-bottom: 14px;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+    .green  { background: #14532d; color: #4ade80; }
+    .orange { background: #431407; color: #fb923c; }
+    .red    { background: #450a0a; color: #f87171; }
+    .card h2 {
+      font-size: 1.1rem;
+      margin-bottom: 10px;
+      color: #c4b5fd;
+    }
+    .card p {
+      font-size: 0.88rem;
+      color: #9ca3af;
+      line-height: 1.6;
+      margin-bottom: 20px;
+    }
+    button {
+      width: 100%;
+      padding: 12px;
+      border: none;
+      border-radius: 10px;
+      font-size: 0.95rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: opacity 0.2s, transform 0.1s;
+      background: linear-gradient(135deg, #7c3aed, #3b82f6);
+      color: #fff;
+    }
+    button:hover   { opacity: 0.88; }
+    button:active  { transform: scale(0.97); }
+    .note {
+      margin-top: 36px;
+      font-size: 0.82rem;
+      color: #555;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Лабораторна робота №13</h1>
+  <p class="subtitle">Умовні оператори в JavaScript — відкрийте консоль (F12) для результатів</p>
+
+  <div class="cards">
+
+    <div class="card">
+      <span class="badge green">🟢 Зелений</span>
+      <h2>Завдання 1 — Типи даних</h2>
+      <p>Доповнити код з x=1, y=2 так, щоб отримати res1="12", res2="true2", res3=true, res4=NaN.</p>
+      <button onclick="loadTask('task1.js')">▶ Запустити</button>
+    </div>
+
+    <div class="card">
+      <span class="badge orange">🟠 Оранжевий</span>
+      <h2>Завдання 2 — Перевірка числа</h2>
+      <p>Введіть число. Програма перевірить, чи воно парне та додатне, а також чи кратне 7.</p>
+      <button onclick="loadTask('task2.js')">▶ Запустити</button>
+    </div>
+
+    <div class="card">
+      <span class="badge orange">🟠 Оранжевий</span>
+      <h2>Завдання 3 — Статус замовлення</h2>
+      <p>Введіть статус: "отримано", "в дорозі" або "скасовано". Реалізовано через if...else і switch.</p>
+      <button onclick="loadTask('task3.js')">▶ Запустити</button>
+    </div>
+
+    <div class="card">
+      <span class="badge red">🔴 Червоний</span>
+      <h2>Завдання 4 — Трикутник</h2>
+      <p>Введіть три сторони. Програма перевіряє існування, тип (рівносторонній/рівнобедрений/різносторонній) та прямокутність.</p>
+      <button onclick="loadTask('task4.js')">▶ Запустити</button>
+    </div>
+
+    <div class="card">
+      <span class="badge red">🔴 Червоний</span>
+      <h2>Завдання 5 — Вітання за часом</h2>
+      <p>Введіть поточну годину. Програма виведе привітання. Реалізовано через if та switch-case.</p>
+      <button onclick="loadTask('task5.js')">▶ Запустити</button>
+    </div>
+
+  </div>
+
+  <p class="note">* Результати виводяться у консоль браузера (F12 → Console)</p>
+
+  <script>
+    function loadTask(src) {
+      // Remove previously injected script
+      const old = document.getElementById('dynamic-task');
+      if (old) old.remove();
+
+      const script = document.createElement('script');
+      script.id  = 'dynamic-task';
+      script.src = src + '?t=' + Date.now();
+      document.body.appendChild(script);
+    }
+  </script>
+
+</body>
+</html>
