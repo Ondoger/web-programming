@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lab 16 — Level 3: Динамічні картки продуктів</title>
+
+    <!-- Font Awesome for shopping cart icon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+    <link rel="stylesheet" href="level3.css">
+</head>
+<body>
+
+    <header>
+        <div class="header-left">
+            <h1>🛍️ Product Store</h1>
+            <div class="level-badge">Високий рівень — Level 3</div>
+        </div>
+        <div class="controls">
+            <span class="products-count" id="products-count">30 товарів</span>
+            <button id="btn-sort">
+                <i class="fa-solid fa-arrow-up-wide-short"></i> Сортувати за ціною
+            </button>
+        </div>
+    </header>
+
+    <div class="category-bar" id="category-bar"></div>
+
+    <main>
+        <div class="sort-indicator" id="sort-indicator"></div>
+        <div id="products-grid"></div>
+    </main>
+
+    <!-- Products data from index.js -->
+    <script src="index.js"></script>
+    <script src="level3.js"></script>
+</body>
+</html>

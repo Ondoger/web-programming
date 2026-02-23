@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lab 16 — Level 2: Редагування та приховання</title>
+    <link rel="stylesheet" href="level2.css">
+</head>
+<body>
+    <h1>Level 2 — Редагування та Видимість</h1>
+    <span class="level-badge">Середній рівень</span>
+
+    <!-- Task 2: Edit content via prompt -->
+    <div class="section">
+        <h2>Завдання 2 — Редагування через prompt()</h2>
+
+        <div id="editable-div">
+            Натисніть кнопку нижче, щоб змінити цей текст через prompt()
+        </div>
+
+        <button class="btn btn-yellow" id="btn-edit">✏️ Редагувати текст</button>
+    </div>
+
+    <!-- Task 3: Toggle visibility -->
+    <div class="section">
+        <h2>Завдання 3 — Показати / Приховати елементи</h2>
+
+        <div class="box-list">
+            <div class="box" id="box1">📦 Елемент 1</div>
+            <div class="box" id="box2">📦 Елемент 2</div>
+            <div class="box" id="box3">📦 Елемент 3</div>
+            <div class="box" id="box4">📦 Елемент 4</div>
+            <div class="box" id="box5">📦 Елемент 5</div>
+        </div>
+
+        <button class="btn btn-toggle" id="btn-toggle">👁️ Приховати елементи</button>
+    </div>
+
+    <script src="level2.js"></script>
+</body>
+</html>

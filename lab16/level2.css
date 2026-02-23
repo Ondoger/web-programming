@@ -1,0 +1,124 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 20px;
+    color: #e0e0e0;
+}
+
+h1 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+    text-align: center;
+    color: #ffd32a;
+    letter-spacing: 1px;
+}
+
+.level-badge {
+    display: inline-block;
+    background: linear-gradient(135deg, #f79f1f, #ffd32a);
+    color: #1a1a2e;
+    padding: 4px 14px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 700;
+    margin-bottom: 40px;
+}
+
+.section {
+    width: 100%;
+    max-width: 700px;
+    background: rgba(255,255,255,0.06);
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 20px;
+    padding: 30px;
+    margin-bottom: 30px;
+    backdrop-filter: blur(10px);
+}
+
+.section h2 {
+    font-size: 1.2rem;
+    margin-bottom: 16px;
+    color: #ffd32a;
+}
+
+#editable-div {
+    background: rgba(255,255,255,0.08);
+    border: 1px solid rgba(255,211,42,0.3);
+    border-radius: 12px;
+    padding: 20px;
+    font-size: 1rem;
+    color: #e0e0e0;
+    min-height: 70px;
+    text-align: center;
+    margin-bottom: 16px;
+    transition: border-color 0.3s;
+}
+
+.box-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-bottom: 16px;
+    justify-content: center;
+}
+
+.box {
+    background: linear-gradient(135deg, #0be881, #009432);
+    color: white;
+    padding: 16px 24px;
+    border-radius: 12px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    transition: opacity 0.4s, transform 0.4s;
+    box-shadow: 0 4px 14px rgba(0,148,50,0.3);
+}
+
+.box.hidden {
+    opacity: 0;
+    transform: scale(0.8);
+    pointer-events: none;
+}
+
+.btn {
+    display: inline-block;
+    border: none;
+    padding: 12px 30px;
+    border-radius: 50px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+    letter-spacing: 0.3px;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+}
+
+.btn-yellow {
+    background: linear-gradient(135deg, #f79f1f, #ffd32a);
+    color: #1a1a2e;
+    box-shadow: 0 4px 16px rgba(247,159,31,0.4);
+    margin-right: 10px;
+}
+
+.btn-toggle {
+    background: linear-gradient(135deg, #0fbcf9, #0652DD);
+    color: white;
+    box-shadow: 0 4px 16px rgba(15,188,249,0.4);
+}
+
+.btn-toggle.is-hidden {
+    background: linear-gradient(135deg, #f53b57, #833471);
+    box-shadow: 0 4px 16px rgba(245,59,87,0.4);
+}
