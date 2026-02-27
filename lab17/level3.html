@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Лабораторна 17 - Рівень 3</title>
+    <link rel="stylesheet" href="level3.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Рівень 3: Вибір країни та міста</h1>
+        <p class="description">Оберіть країну, щоб побачити список доступних міст.</p>
+        
+        <div class="selector-card">
+            <div class="form-group">
+                <label for="country-select">Оберіть країну:</label>
+                <select id="country-select">
+                    <option value="" disabled selected>-- Виберіть країну --</option>
+                    <option value="ukraine">Україна</option>
+                    <option value="germany">Німеччина</option>
+                    <option value="usa">США</option>
+                    <option value="france">Франція</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="city-select">Оберіть місто:</label>
+                <select id="city-select" disabled>
+                    <option value="" disabled selected>-- Спочатку оберіть країну --</option>
+                </select>
+            </div>
+
+            <div class="result-box" id="result-display">
+                Результат буде тут...
+            </div>
+        </div>
+
+        <a href="index.html" class="back-link">← На головну</a>
+    </div>
+    <script src="level3.js"></script>
+</body>
+</html>

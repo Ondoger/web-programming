@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Лабораторна 17 - JavaScript Події</title>
+    <style>
+        :root {
+            --primary-color: #6366f1;
+            --bg-color: #0f172a;
+            --card-bg: #1e293b;
+            --text-color: #f8fafc;
+        }
+
+        body {
+            font-family: 'Inter', system-ui, -apple-system, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 2rem;
+        }
+
+        .hub-container {
+            max-width: 900px;
+            width: 100%;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 3rem;
+            margin-bottom: 3rem;
+            background: linear-gradient(to right, #818cf8, #c084fc);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        .hub-card {
+            background-color: var(--card-bg);
+            padding: 2.5rem;
+            border-radius: 1.5rem;
+            text-decoration: none;
+            color: var(--text-color);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .hub-card:hover {
+            transform: translateY(-10px);
+            border-color: var(--primary-color);
+            box-shadow: 0 20px 25px -5px rgba(99, 102, 241, 0.2);
+            background-color: rgba(99, 102, 241, 0.05);
+        }
+
+        .hub-card h2 {
+            margin: 0;
+            color: #818cf8;
+        }
+
+        .hub-card p {
+            color: #94a3b8;
+            font-size: 0.95rem;
+        }
+
+        .level-badge {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 0.25rem 0.75rem;
+            border-radius: 1rem;
+            font-size: 0.75rem;
+            font-weight: 700;
+            text-transform: uppercase;
+        }
+    </style>
+</head>
+<body>
+    <div class="hub-container">
+        <h1>Лабораторна робота №17</h1>
+        <div class="grid">
+            <a href="level1.html" class="hub-card">
+                <span class="level-badge">Достатній</span>
+                <h2>Рівень 1</h2>
+                <p>Видалення блоків контенту за допомогою кнопок 'x'.</p>
+            </a>
+            <a href="level2.html" class="hub-card">
+                <span class="level-badge">Середній</span>
+                <h2>Рівень 2</h2>
+                <p>Бургер-меню, що розгортається та згортається по кліку.</p>
+            </a>
+            <a href="level3.html" class="hub-card">
+                <span class="level-badge">Високий</span>
+                <h2>Рівень 3</h2>
+                <p>Динамічний вибір країни та міста з миттєвим результатом.</p>
+            </a>
+        </div>
+    </div>
+</body>
+</html>
