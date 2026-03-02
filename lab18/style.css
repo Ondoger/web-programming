@@ -1,0 +1,152 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #f0f2f5;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #3a3a3a;
+  padding: 12px 24px;
+}
+
+header h1 {
+  color: #fff;
+  font-size: 1.4rem;
+  font-weight: bold;
+}
+
+#openModalBtn {
+  background: #5a5a5a;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 0.95rem;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background 0.2s;
+}
+
+#openModalBtn:hover {
+  background: #777;
+}
+
+.overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55);
+  z-index: 100;
+  justify-content: center;
+  align-items: center;
+}
+
+.overlay.active {
+  display: flex;
+}
+
+.modal {
+  background: #fff;
+  border-radius: 6px;
+  width: 420px;
+  max-width: 95vw;
+  max-height: 90vh;
+  overflow-y: auto;
+  padding: 24px;
+  position: relative;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+}
+
+.modal h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 1.25rem;
+  color: #222;
+}
+
+.close-btn {
+  position: absolute;
+  top: 12px;
+  right: 14px;
+  background: none;
+  border: none;
+  font-size: 1.3rem;
+  cursor: pointer;
+  color: #555;
+  line-height: 1;
+}
+
+.close-btn:hover {
+  color: #000;
+}
+
+.form-group {
+  margin-bottom: 14px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 4px;
+  font-size: 0.9rem;
+  color: #333;
+}
+
+.form-group input,
+.form-group textarea,
+.form-group select {
+  width: 100%;
+  padding: 8px 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.form-group input:focus,
+.form-group textarea:focus,
+.form-group select:focus {
+  border-color: #5a5a5a;
+}
+
+.form-group input.invalid,
+.form-group textarea.invalid,
+.form-group select.invalid {
+  border-color: #e74c3c;
+}
+
+.form-group textarea {
+  resize: vertical;
+  min-height: 72px;
+}
+
+.error-msg {
+  color: #e74c3c;
+  font-size: 0.78rem;
+  margin-top: 3px;
+  display: none;
+}
+
+.save-btn {
+  display: block;
+  width: 100%;
+  padding: 11px;
+  background: #e0e0e0;
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+  cursor: pointer;
+  margin-top: 8px;
+  transition: background 0.2s;
+}
+
+.save-btn:hover {
+  background: #c8c8c8;
+}

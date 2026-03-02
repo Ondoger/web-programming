@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Лабораторна робота 18 - OOP JavaScript</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="background-blobs">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+        <div class="blob blob-3"></div>
+    </div>
+
+    <main class="container">
+        <header class="hero">
+            <h1>JS Object Oriented Programming</h1>
+            <p class="subtitle">Лабораторна робота №18</p>
+        </header>
+
+        <section class="level level-1" id="level-1">
+            <div class="level-header">
+                <h2>Достатній рівень</h2>
+                <div class="badge green">Easy</div>
+            </div>
+            <div class="card-grid">
+                <div class="card" id="car-card">
+                    <h3>Завдання 1: Car Constructor</h3>
+                    <p>Створення об'єктів через функцію-конструктор та прототипи.</p>
+                    <div class="output-preview" id="car-output">
+                        <code>// Результати будуть в консолі</code>
+                    </div>
+                </div>
+                <div class="card" id="student-card">
+                    <h3>Завдання 2: Student Class</h3>
+                    <p>Базова реалізація класів в ES6.</p>
+                    <div class="output-preview" id="student-output">
+                        <code>// Результати будуть в консолі</code>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="level level-2" id="level-2">
+            <div class="level-header">
+                <h2>Середній рівень</h2>
+                <div class="badge orange">Medium</div>
+            </div>
+            <div class="card">
+                <h3>Завдання 3: Shapes & Inheritance</h3>
+                <p>Базовий клас Shape та його підкласи Circle і Rectangle.</p>
+                <div class="output-preview" id="shape-output">
+                    <code>// Результати будуть в консолі</code>
+                </div>
+            </div>
+        </section>
+
+        <section class="level level-3" id="level-3">
+            <div class="level-header">
+                <h2>Високий рівень</h2>
+                <div class="badge red">Hard</div>
+            </div>
+            <div class="card">
+                <h3>Завдання 4 & 5: UI Components</h3>
+                <p>Динамічне створення кнопок Button та RoundedButton з обробкою подій.</p>
+                <div id="button-container" class="button-showcase">
+                    <!-- Buttons will be rendered here -->
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
