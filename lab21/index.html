@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>eShop</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <h1>eShop</h1>
+    <button id="openModalBtn">create Product</button>
+  </header>
+
+  <!-- PRODUCT GRID -->
+  <main id="productsGrid"></main>
+
+  <!-- OVERLAY + MODAL (Create / Edit) -->
+  <div class="overlay" id="overlay">
+    <div class="modal" id="modal">
+      <button class="close-btn" id="closeBtn">&times;</button>
+      <h2 id="modalTitle">Create product</h2>
+
+      <form id="productForm" novalidate>
+        <input type="hidden" id="editId" value="" />
+
+        <div class="form-group">
+          <label for="title">Title: <span class="req">*</span></label>
+          <input type="text" id="title" placeholder="Title" />
+          <div class="error-msg" id="titleError">Поле обов'язкове</div>
+        </div>
+
+        <div class="form-group">
+          <label for="description">Description: <span class="req">*</span></label>
+          <textarea id="description" placeholder="Description"></textarea>
+          <div class="error-msg" id="descriptionError">Поле обов'язкове</div>
+        </div>
+
+        <div class="form-group">
+          <label for="price">Price: <span class="req">*</span></label>
+          <input type="number" id="price" placeholder="0" min="0" />
+          <div class="error-msg" id="priceError">Поле обов'язкове та не може бути від'ємним</div>
+        </div>
+
+        <div class="form-group">
+          <label for="discount">Discount: <span class="req">*</span></label>
+          <input type="number" id="discount" placeholder="0" min="0" />
+          <div class="error-msg" id="discountError">Поле обов'язкове та не може бути від'ємним</div>
+        </div>
+
+        <div class="form-group">
+          <label for="stock">In stock:</label>
+          <input type="number" id="stock" placeholder="0" min="0" />
+          <div class="error-msg" id="stockError">Не може бути від'ємним</div>
+        </div>
+
+        <div class="form-group">
+          <label for="brand">Brand:</label>
+          <input type="text" id="brand" placeholder="Brand" />
+        </div>
+
+        <div class="form-group">
+          <label for="category">Category: <span class="req">*</span></label>
+          <select id="category">
+            <option value="">-- Select category --</option>
+            <option value="Smartphones">Smartphones</option>
+            <option value="Laptops">Laptops</option>
+            <option value="Fragrances">Fragrances</option>
+            <option value="Skincare">Skincare</option>
+            <option value="Groceries">Groceries</option>
+            <option value="Home Decoration">Home Decoration</option>
+            <option value="Other">Other</option>
+          </select>
+          <div class="error-msg" id="categoryError">Оберіть категорію</div>
+        </div>
+
+        <div class="form-group">
+          <label for="image">Link to picture: <span class="req">*</span></label>
+          <input type="url" id="image" placeholder="https://..." />
+          <div class="error-msg" id="imageError">Поле обов'язкове</div>
+        </div>
+
+        <button type="submit" class="save-btn">Save Product</button>
+      </form>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
